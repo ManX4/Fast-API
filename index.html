@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign Up</title>
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#667eea,#764ba2);
+}
+
+.signup-container{
+    width:360px;
+    padding:35px;
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,.2);
+    border-radius:18px;
+    box-shadow:0 15px 35px rgba(0,0,0,.2);
+}
+
+header h1{
+    text-align:center;
+    color:#fff;
+    margin-bottom:25px;
+    font-weight:600;
+}
+
+form p{
+    margin-bottom:18px;
+}
+
+label{
+    display:block;
+    margin-bottom:6px;
+    color:#fff;
+    font-size:14px;
+}
+
+input{
+    width:100%;
+    padding:12px;
+    border:none;
+    outline:none;
+    border-radius:10px;
+    background:rgba(255,255,255,.25);
+    color:#fff;
+    transition:.3s;
+}
+
+input::placeholder{
+    color:#e6e6e6;
+}
+
+input:focus{
+    background:#fff;
+    color:#333;
+    box-shadow:0 0 0 3px rgba(255,255,255,.35);
+}
+
+button{
+    width:100%;
+    padding:12px;
+    margin-top:10px;
+    border:none;
+    border-radius:10px;
+    background:linear-gradient(90deg,#00c6ff,#0072ff);
+    color:#fff;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 20px rgba(0,114,255,.4);
+}
+
+button:active{
+    transform:scale(.98);
+}
+
+footer{
+    text-align:center;
+    margin-top:18px;
+    color:#fff;
+    font-size:14px;
+}
+
+footer a{
+    color:#fff;
+    text-decoration:none;
+    font-weight:600;
+}
+
+footer a:hover{
+    text-decoration:underline;
+}
+</style>
+</head>
+<body>
+
+  <main>
+    <section class="signup-container" aria-labelledby="signup-heading">
+      <header>
+        <h1 id="signup-heading">Account Sign Up</h1>
+      </header>
+
+      <form action="/submit_signup" method="POST">
+        <p>
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="Your Full name" required>
+        </p>
+
+        <p>
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="Enter you email ID" required>
+        </p>
+
+        <p>
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="Enter New password" required>
+        </p>
+
+        <p>
+          <label for="confirm-password">Confirm Password</label>
+          <input type="password" id="confirm-password" name="confirm_password" placeholder="Re-enter password" required>
+        </p>
+
+        <button type="submit">Sign Up</button>
+      </form>
+
+</body>
+<footer>
+    Already have an account?
+    <a href="#">Sign In</a>
+</footer>
+</html>
